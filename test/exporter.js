@@ -12,6 +12,6 @@ describe('#XML()', function () {
         project.export({format: 'xml'}, function (err, data) {
             assert.equal(data + '\n', fs.readFileSync('test/data/minimalist-project.xml', 'utf8'));
         });
-    });
+    }).timeout(3000);
 
 });
